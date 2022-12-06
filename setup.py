@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from typing import List
 
 PROJECT_NAME = "housing-predictor"
-PROJECT_VERSION = "0.0.1"
+PROJECT_VERSION = "0.0.2"
 PROJECT_AUTHOR = "SAHIL KAHN"
 DESCRIPTION = "This project is the first basic ML_PROJECT predicting house price"
 
