@@ -79,3 +79,13 @@ class Pipeline(Thread):
 
         except Exception as e:
             raise housingException(e,sys) from e
+
+
+    def start_model_trainer(self, data_transformation_artifact: DataTransformationArtifact) -> ModelTrainerArtifact:
+        try:
+            model_trainer = ModelTrainer(model_trainer_config=self.config.get_model_trainer_config(),
+                                         data_transformation_artifact=data_transformation_artifact
+                                         )
+            return model_trainer.initiate_model_trainer()
+        except Exception as e:
+            raise housingException(e, sys) from e
